@@ -157,6 +157,11 @@ imageSeries.data = [ {"zoomLevel": 5,
   "longitude": 21.166667
 }];
 function adddata(){
+  imageSeries.data=[];
+  var ele=document.getElementsByClassName('map-marker');
+  for(var i=0;i<ele.length;i++)
+  ele[i].parentNode.removeChild(ele[i]);
+  
   imageSeries.addData( {"zoomLevel": 5,
   "scale": 0.5,
   "title": "Washington",
